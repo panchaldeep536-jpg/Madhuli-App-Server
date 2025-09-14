@@ -2,9 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import connectDB from "./db.js";
 
 dotenv.config();
 const app = express();
+connectDB();
 app.use(cors({
     origin: [
         "http://localhost:5173",                
